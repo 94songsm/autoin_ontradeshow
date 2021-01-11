@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require('cors')
+const clientApp = path.join(__dirname, "../client/build")
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -23,6 +24,7 @@ const connect = mongoose.connect(config.mongoURI,
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
+process.env.NODE_ENV = 'production';
 app.use(cors())
 
 //to not get any deprecation warning or error
@@ -40,15 +42,20 @@ app.use('/api/product', require('./routes/product'));
 //https://stackoverflow.com/questions/48914987/send-image-path-from-node-js-express-server-to-react-client
 app.use('/uploads', express.static('uploads'));
 
+
+//app.use("/api/*", apiRouters()) // api 라우팅처리 후
+//app.use("*", express.static(clientApp)) // 모든 요청을 프론트엔드 정적 파일이 처리
+
+console.log(process.env.NODE_ENV);
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
-
-  // Set static folder   
+  console.log("production mode start!!!");
+  // Set static folder
   // All the javascript and css files will be read and served from this folder
-  app.use(express.static("client/build"));
-
+  app.use(express.static(path.join(__dirname, "../client/build")));
   // index.html for all page routes    html or routing and naviagtion
-  app.get("*", (req, res) => {
+  app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
   });
 }

@@ -38,6 +38,7 @@ function SearchPage(props) {
 				console.log(response.data.success)
                 if (response.data.success) {
 					if (body.loadMore) {
+						console.log([...Events, ...response.data.info]);
 						setEvents([...Events, ...response.data.info]);
 					} else {
 						setEvents(response.data.info);

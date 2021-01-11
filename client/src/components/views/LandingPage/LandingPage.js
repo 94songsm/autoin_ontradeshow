@@ -12,7 +12,7 @@
   import {Button} from 'antd';
   import Footer from '../Footer/Footer';
   import {useHistory} from "react-router";
-  
+
   import { IdcardOutlined } from '@ant-design/icons';
   import { DesktopOutlined } from '@ant-design/icons';
   import { CarOutlined } from '@ant-design/icons';
@@ -88,9 +88,9 @@
 			limit: Limit
 		}
 		getEvents(body);
-        
+
   }, []);
-  
+
 
   const getEvents = (body) => {
 		axios.post('/api/product/products', body)
@@ -108,7 +108,7 @@
                 }
             })
   }
-  
+
 
       const buttonSt = {
           border: "white", //1px solid #364d79
@@ -134,9 +134,9 @@
             <Card
               cover={<a href={`/event/${event._id}`}>
                 <img style={{position : 'inline', width: '100%', height: '100px', maxHeight: '30%'}} src={`http://localhost:5000/${event.images[0]}`}/>
-                </a>} 
+                </a>}
               >
-              <Meta 
+              <Meta
                 title={event.title}
                 description={`$${event.price}`}
               />
@@ -158,37 +158,37 @@
               <div>
               <h3> { <img style={{width: '100%', height: '100%'}} src={banner_3}/> }</h3>
               </div>
-              
+
               <div>
               <h3> { <img style={{width: '100%', height: '100%'}} src={banner_4}/> }</h3>
               </div>
 
           </Carousel>
-          
+
 
           <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left', marginTop: "2%"}}>
           <h1> &nbsp;&nbsp;&nbsp;&nbsp;가장 인기있는 카테고리</h1>
           </div>
           <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left'}}>
-          <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관심지수가 가장 높은 인기 카테고리는 여기서 찾아보세요! {' '}  </label> 
+          <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관심지수가 가장 높은 인기 카테고리는 여기서 찾아보세요! {' '}  </label>
           </div>
           <div  style={{display: 'flex', justifyContent: 'center', marginTop: "2%"}} >
 
-          <IdcardOutlined type="primary" style = {IdcardOutlinedst} onClick={() => categoryButtonHandler(1)}><IdcardOutlined style={{color: "#123d79" }} /> BUSINESS</IdcardOutlined>  
-          <DesktopOutlined type="primary" style = {DesktopOutlinedst} onClick={() => categoryButtonHandler(2)}><DesktopOutlined style={{color: "#123d79" }} />IT</DesktopOutlined>    
-          <CarOutlined type="primary" style = {CarOutlinedst} onClick={() => categoryButtonHandler(3)}><CarOutlined style={{color: "eb2f96" }} />AUTOMOBILE</CarOutlined>    
-          <PlaySquareOutlined type="primary" style = {PlaySquareOutlinedst} onClick={() => categoryButtonHandler(4)}><PlaySquareOutlined style={{color: "#364d79" }} />MEDIA</PlaySquareOutlined> 
-          <AndroidOutlined type="primary" style = {AndroidOutlinedst} onClick={() => categoryButtonHandler(4)}><AndroidOutlined style={{color: "#364d79" }} />MOBILE</AndroidOutlined>    
+          <IdcardOutlined type="primary" style = {IdcardOutlinedst} onClick={() => categoryButtonHandler(1)}><IdcardOutlined style={{color: "#123d79" }} /> BUSINESS</IdcardOutlined>
+          <DesktopOutlined type="primary" style = {DesktopOutlinedst} onClick={() => categoryButtonHandler(2)}><DesktopOutlined style={{color: "#123d79" }} />IT</DesktopOutlined>
+          <CarOutlined type="primary" style = {CarOutlinedst} onClick={() => categoryButtonHandler(3)}><CarOutlined style={{color: "eb2f96" }} />AUTOMOBILE</CarOutlined>
+          <PlaySquareOutlined type="primary" style = {PlaySquareOutlinedst} onClick={() => categoryButtonHandler(4)}><PlaySquareOutlined style={{color: "#364d79" }} />MEDIA</PlaySquareOutlined>
+          <AndroidOutlined type="primary" style = {AndroidOutlinedst} onClick={() => categoryButtonHandler(4)}><AndroidOutlined style={{color: "#364d79" }} />MOBILE</AndroidOutlined>
           <EllipsisOutlined type="primary" style = {EllipsisOutlinedst} onClick={() => categoryButtonHandler()}><EllipsisOutlined style={{color: "#364d79" }} />OTHERS</EllipsisOutlined>
 
           </div>
           <div  style={{display: 'flex', justifyContent: 'center',marginTop: "-4%"}} >
 
-          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(1)}><IdcardOutlined style={{color: "#364d79" }} /> BUSINESS</Button>  
-          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(2)}><DesktopOutlined style={{color: "#364d79" }} />IT</Button>    
-          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(3)}><CarOutlined style={{color: "#364d79" }} />AUTOMOBILE</Button>    
-          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(4)}><PlaySquareOutlined style={{color: "#364d79" }} />MEDIA</Button> 
-          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(4)}><AndroidOutlined style={{color: "#364d79" }} />MOBILE</Button>    
+          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(1)}><IdcardOutlined style={{color: "#364d79" }} /> BUSINESS</Button>
+          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(2)}><DesktopOutlined style={{color: "#364d79" }} />IT</Button>
+          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(3)}><CarOutlined style={{color: "#364d79" }} />AUTOMOBILE</Button>
+          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(4)}><PlaySquareOutlined style={{color: "#364d79" }} />MEDIA</Button>
+          <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler(4)}><AndroidOutlined style={{color: "#364d79" }} />MOBILE</Button>
           <Button type="primary" style = {buttonSt} onClick={() => categoryButtonHandler()}><EllipsisOutlined style={{color: "#364d79" }} />OTHERS</Button>
 
           </div>
@@ -196,9 +196,9 @@
           <h1> &nbsp;&nbsp;&nbsp;&nbsp;최근 전시회</h1>
           </div>
           <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left'}}>
-          <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시회가 가장 최근에 개설! {' '}  </label> 
+          <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시회가 가장 최근에 개설! {' '}  </label>
           </div>
-          
+
           <div style ={{display: 'flex', justifyContent: 'center',marginTop: "2%", textAlign : 'center'}}>
               {/* Card */}
               <Row>
@@ -210,7 +210,7 @@
           <h1> &nbsp;&nbsp;&nbsp;&nbsp;전시회 광고판</h1>
           </div>
           <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left'}}>
-          <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시회 광고를 보실수 있습니다 {' '}  </label> 
+          <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시회 광고를 보실수 있습니다 {' '}  </label>
           </div>
       <Carousel autoplay>
 
@@ -231,10 +231,10 @@
 </div>
 
 </Carousel>
-        </div>  
-        
-  
-      );    
+        </div>
+
+
+      );
   }
 
   export default LandingPage

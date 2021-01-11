@@ -27,7 +27,7 @@ function FileUpload(props) {
 			});
 
 	}
-	
+
 	const deleteHandler = (image) => {
 		const currentIndex = Images.indexOf(image);
 
@@ -37,7 +37,7 @@ function FileUpload(props) {
 		setImages(newImages);
 		props.refreshFunction(newImages);
 	}
-	
+
 	return (
 		<div>
 				<Dropzone ref={dropzoneRef} onDrop={dropHandler}>
