@@ -56,7 +56,7 @@ router.post("/products", (req, res) => {
   }
 
   console.log(findArgs);
-  console.log('term: ', term)
+//  console.log('term: ', term)
   if (term) {
     Product.find(findArgs)
     .find({ $text: { $search: term }})

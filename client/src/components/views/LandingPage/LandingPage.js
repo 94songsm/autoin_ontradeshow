@@ -130,7 +130,7 @@ const getEvents = (body) => {
 
     const renderCards = Events.map((event, index) => {
       //console.log('Event', event);
-      return <Col lg = {3} md = {6} xs = {24} style ={{marginLeft : '0.5%', border :'1px solid #f5f5f5', borderRadius : '10px'}}>
+      return <Col lg = {3} md = {6} xs = {24} style ={{marginLeft : '0.5%'}}>
           <Card style = {{borderRadius : '10px',marginTop :'1%'}}
             cover={<a href={`/event/${event._id}`}>
               <img style={{position : 'inline', width: '99%', height: '99%', maxHeight: '30%', borderRadius : '10px'}} src={`http://localhost:5000/${event.images[0]}`}/>
@@ -196,21 +196,21 @@ const getEvents = (body) => {
         <h2 style = {{marginLeft : '2%',fontWeight : 'bold'}}>최근 전시회</h2>
         </div>
         <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left'}}>
-        <h3 style={{ color: "#8d8d8d", marginLeft : '2.5%'}}>전시회가 가장 최근에 개설!  </h3> 
+        <h3 style={{ color: "#8d8d8d", marginLeft : '2.5%'}}>전시회가 가장 최근에 개설!</h3> 
         </div>
         
         <div style ={{display: 'flex', justifyContent: 'left',marginTop: "0.5%", textAlign : 'center',}}>
             {/* Card */}
-            <Row style = {{ marginLeft : '2.5%'}}>
+            <Row style = {{width : '100%',marginLeft : '2.5%'}}>
                 {renderCards}
             </Row>
     </div>
 
     <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left', marginTop: "2%"}}>
-        <h1> &nbsp;&nbsp;&nbsp;&nbsp;전시회 광고판</h1>
+        <h2 style = {{marginLeft : '2%',fontWeight : 'bold'}}>전시회 광고판</h2>
         </div>
         <div style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'left'}}>
-        <label style={{ color: "#8d8d8d"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전시회 광고를 보실수 있습니다 {' '}  </label> 
+        <h3 style={{ color: "#8d8d8d", marginLeft : '2.5%'}}>전시회 광고를 보실수 있습니다  </h3> 
         </div>
     <Carousel autoplay>
 

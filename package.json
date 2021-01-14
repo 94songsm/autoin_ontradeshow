@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server/index.js",
     "backend": "nodemon server/index.js",
-    "frontend": "node ./server/start-client.js",
+    "frontend": "npm run start --prefix client",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "author": "John ahn",

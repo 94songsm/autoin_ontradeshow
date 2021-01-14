@@ -67,7 +67,7 @@ function SearchPage(props) {
 		return <Col lg={6} md={8} xs={24} key={index}>
 				<Card
 					cover={<a href={`/event/${event._id}`}>
-						<img style={{width: '100%', height: '200px', maxHeight: '200px'}} src={`http://localhost:5000/${event.images[0]}`}/>
+						<img style={{width: '100%', height: '200px', maxHeight: '200px'}} src={`http://15.164.163.196:5000/${event.images[0]}`}/>
 						</a>}
 					>
 					<Meta 
