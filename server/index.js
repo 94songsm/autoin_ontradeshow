@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require('cors')
-const clientApp = path.join(__dirname, "../client/build")
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -40,7 +39,7 @@ app.use('/api/product', require('./routes/product'));
 
 //use this to show the image you have in node js server to client (react js)
 //https://stackoverflow.com/questions/48914987/send-image-path-from-node-js-express-server-to-react-client
-app.use('/uploads', express.static('uploads'));
+app.use('/api/uploads', express.static('uploads'));
 
 
 //app.use("/api/*", apiRouters()) // api 라우팅처리 후

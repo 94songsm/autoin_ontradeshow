@@ -28,7 +28,7 @@
       const [Events, setEvents] = useState([]);
       const [PostSize, setPostSize] = useState();
       const [Skip, setSkip] = useState(0);
-      const [Limit, setLimit] = useState(8);
+      const [Limit, setLimit] = useState(6);
       const [Filters, setFilters] = useState({
         category: [],
         price: []
@@ -96,17 +96,18 @@
 		axios.post('/api/product/products', body)
             .then(response => {
 				console.log(response.data.success)
-                if (response.data.success) {
+        if (response.data.success) {
 					if (body.loadMore) {
 						setEvents([...Events, ...response.data.info]);
 					} else {
+            console.log(response.data.info);
 						setEvents(response.data.info);
 					}
 					setPostSize(response.data.postSize);
-                } else {
-                    alert('fail to load events');
-                }
-            })
+        } else {
+            alert('fail to load events');
+      }
+    })
   }
 
 
@@ -133,7 +134,7 @@
         return<Col lg = {1} key={index} style = {{width : '220px',padding : '15px',background : ' #364d79'}}>
             <Card
               cover={<a href={`/event/${event._id}`}>
-                <img style={{position : 'inline', width: '100%', height: '100px', maxHeight: '30%'}} src={`http://localhost:5000/${event.images[0]}`}/>
+                <img style={{position : 'inline', width: '100%', height: '100px', maxHeight: '30%'}} src={`http://15.164.163.196:5000/${event.images[0]}`}/>
                 </a>}
               >
               <Meta

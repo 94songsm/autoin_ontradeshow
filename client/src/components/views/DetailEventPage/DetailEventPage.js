@@ -13,6 +13,7 @@ function DetailEventPage(props) {
 	useEffect(() => {
 		axios.get(`/api/product/products_by_id?id=${eventId}&type=single`)
 			.then(res => {
+				console.log(res.data);
 				setProduct(res.data[0]);					
 			})
 			.catch(err => alert(err))
