@@ -53,7 +53,7 @@ function SearchPage(props) {
 	const loadMoreHandler = () => {
 		let skip = Skip + Limit;
 		let body = {
-			skip: Skip,
+			skip: skip,
 			limit: Limit,
 			loadMore: true
 		}
