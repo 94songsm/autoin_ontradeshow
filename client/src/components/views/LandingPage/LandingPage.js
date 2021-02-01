@@ -133,7 +133,7 @@ const getEvents = (body) => {
       return <Col lg = {3} md = {6} xs = {24} style ={{marginLeft : '0.5%'}}>
           <Card style = {{borderRadius : '10px',marginTop :'1%'}}
             cover={<a href={`/event/${event._id}`}>
-              <img style={{position : 'inline', width: '99%', height: '99%', maxHeight: '30%', borderRadius : '10px'}} src={`http://localhost:5000/${event.images[0]}`}/>
+              <img style={{position : 'inline', width: '99%', height: '99%', maxHeight: '30%', borderRadius : '10px'}} src={`http://15.164.163.196:80/api/${event.images[0]}`}/>
               </a>} 
             >
             <Meta 
@@ -199,7 +199,7 @@ const getEvents = (body) => {
         <h3 style={{ color: "#8d8d8d", marginLeft : '2.5%'}}>전시회가 가장 최근에 개설!</h3> 
         </div>
         
-        <div style ={{display: 'flex', justifyContent: 'left',marginTop: "0.5%", textAlign : 'center',}}>
+        <div style ={{display: 'flex', justifyContent: 'left',marginTop: "0.5%", textAlign : 'center'}}>
             {/* Card */}
             <Row style = {{width : '100%',marginLeft : '2.5%'}}>
                 {renderCards}

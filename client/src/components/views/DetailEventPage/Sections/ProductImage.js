@@ -9,8 +9,8 @@ function ProductImage(props) {
 			props.detail.images.map(item => {
 				console.log(item);
 				images.push({
-					original: `http://15.164.163.196:5000/${item}`,		//해당 ec2 인스턴스 퍼블릭 주소:PORT 번호를 이곳에 작성해야 이미지가 정상적으로 업로드됨.
-					thumbnail: `http://15.164.163.196:5000/${item}`
+					original: `http://15.164.163.196:80/api/${item}`,		//해당 ec2 인스턴스 퍼블릭 주소:PORT 번호를 이곳에 작성해야 이미지가 정상적으로 업로드됨.
+					thumbnail: `http://15.164.163.196:80/api/${item}`
 				})
 			})
 			setImages(images);
