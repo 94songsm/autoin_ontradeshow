@@ -4,10 +4,10 @@ import axios from 'axios';
 
 import ImageSlider from '../../utils/ImageSlider';
 import { Carousel, Icon,Col,Row,Card } from 'antd';
-import  banner_1  from './banner/banner_1.png';
-import  banner_2  from './banner/banner_2.jpg';
+import  banner_1  from './banner/banner_1.JPG';
+import  banner_2  from './banner/banner_2.png';
 import  banner_3  from './banner/banner_3.jpg';
-import  banner_4  from './banner/banner_4.jpg';
+
 
 import {Button} from 'antd';
 import Footer from '../Footer/Footer';
@@ -155,13 +155,7 @@ const getEvents = (body) => {
             <h3> { <img style={{width: '100%', height: '100%'}} src={banner_2}/> }</h3>
             </div>
 
-            <div>
-            <h3> { <img style={{width: '100%', height: '100%'}} src={banner_3}/> }</h3>
-            </div>
-            
-            <div>
-            <h3> { <img style={{width: '100%', height: '100%'}} src={banner_4}/> }</h3>
-            </div>
+        
 
         </Carousel>
         
@@ -215,20 +209,10 @@ const getEvents = (body) => {
     <Carousel autoplay>
 
 <div>
-<h3>{ <img style={{width: '80%', height: '50%',margin: "Auto",marginTop: "2%"}} src={banner_1}/> }</h3>
-</div>
-
-<div>
-<h3> { <img style={{width: '80%', height: '50%',margin: "Auto",marginTop: "2%"}} src={banner_2}/> }</h3>
-</div>
-
-<div>
 <h3> { <img style={{width: '80%', height: '50%',margin: "Auto",marginTop: "2%"}} src={banner_3}/> }</h3>
 </div>
 
-<div>
-<h3> { <img style={{width: '80%', height: '50%',margin: "Auto",marginTop: "2%"}} src={banner_4}/> }</h3>
-</div>
+
 
 </Carousel>
       </div>  
