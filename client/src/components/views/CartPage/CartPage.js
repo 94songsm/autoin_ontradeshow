@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { getCartItems, removeCartItem, onSuccessBuy } from '../../../_actions/user_actions'
 import UserCardBlock from './Sections/UserCardBlock'
 import { Result, Empty } from 'antd';
-import Paypal from '../../utils/Paypal'
+import  from '../../utils/'
 function CartPage(props) {
 	const dispatch = useDispatch();
 
@@ -87,7 +87,7 @@ function CartPage(props) {
 
 			<div style={{alignItems: 'flex-end'}}>
 			{ShowTotal && 
-				<Paypal total={Total} onSuccess={transactionSuccess}/>
+				< total={Total} onSuccess={transactionSuccess}/>
 			}
 			</div>
 		</div>

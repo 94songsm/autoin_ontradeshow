@@ -1,3 +1,3 @@
 module.exports = {
-    mongoURI: "mongodb+srv://ontradeshow:Mx5VqQN4Mi*t@boilerplate.awr9q.mongodb.net/<dbname>?retryWrites=true&w=majority"
+    mongoURI: "mongodb+srv://autoin:Autoin2021@ontradeshow.wwydw.mongodb.net/<dbname>?retryWrites=true&w=majority"
  }
